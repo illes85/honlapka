@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weboldal Készítés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-sky-50 text-slate-800">
+
+    <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold text-slate-900">WebStudio<span class="text-orange-500">.</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold">
+            <a href="#szolgaltatasok" class="hover:text-orange-500 transition">Szolgáltatások</a>
+            <a href="#munkak" class="hover:text-orange-500 transition">Referenciák</a>
+            <a href="#arak" class="hover:text-orange-500 transition">Árak</a>
+        </div>
+        <a href="#kapcsolat" class="bg-slate-900 text-white px-5 py-2 rounded-full font-medium hover:bg-orange-500 transition duration-300">
+            Ajánlatkérés
+        </a>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 md:pr-10">
+            <span class="text-orange-600 font-bold tracking-wider uppercase text-sm mb-2 block">Kisvállalkozásokra szabva</span>
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-slate-900 mb-6">
+                Weboldal, ami <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">vevőket hoz.</span>
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                Felejtsd el a lassú, drága fejlesztéseket. Modern, gyors és mobilon is tökéletes weboldalakat készítek, fix áron, rejtett költségek nélkül.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#demok" class="text-center bg-orange-500 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:shadow-orange-500/30 hover:-translate-y-1 transition duration-300">
+                    Demók megtekintése
+                </a>
+                <a href="#kapcsolat" class="text-center border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-lg font-bold hover:border-slate-900 hover:text-slate-900 transition duration-300">
+                    Ingyenes konzultáció
+                </a>
+            </div>
+            
+            <div class="mt-8 flex items-center gap-2 text-sm text-slate-500">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>Google PageSpeed: 100/100</span>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 mt-12 md:mt-0 relative">
+            <div class="absolute -inset-4 bg-gradient-to-r from-orange-200 to-blue-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+            <div class="relative bg-white p-6 rounded-2xl shadow-2xl border border-slate-100">
+                <div class="flex space-x-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <div class="bg-slate-100 rounded h-64 w-full flex items-center justify-center text-slate-400">
+                    Ide jön majd egy kép a sablonjaidról
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section id="szolgaltatasok" class="max-w-7xl mx-auto px-6 py-20 md:py-24">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            A Te problémáidra találtuk ki.
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            A kisvállalkozók igényeire szabott 3 fő szolgáltatásunk. Fix ár, fix határidő.
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-orange-500 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-orange-500 mb-4">
+    		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-14">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+		</svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">
+                1. Profi Bemutatkozó
+            </h3>
+            <p class="text-slate-600 mb-5">
+                Modern, SEO-barát landing oldal kisvállalkozóknak. Szolgáltatás, kapcsolat és galéria oldallal. Tiszta, gyors kód, amit a Google is szeret.
+            </p>
+            <a href="#arak" class="text-orange-600 font-semibold flex items-center">
+                Részletek és árak
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-slate-900 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-slate-900 mb-4">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">
+                2. Kész Webshop (WooCommerce)
+            </h3>
+            <p class="text-slate-600 mb-5">
+                Költséghatékony WooCommerce alapú webáruház beüzemelése. Fizetési és szállítási integráció, termékfeltöltési segédlettel.
+            </p>
+            <a href="#arak" class="text-orange-600 font-semibold flex items-center">
+                Részletek és árak
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-orange-500 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-orange-500 mb-4">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">
+                3. Karbantartás és SEO
+            </h3>
+            <p class="text-slate-600 mb-5">
+                Folyamatos frissítés, biztonsági mentések és technikai optimalizáció, ha a meglévő oldalad WP-n van. Alap szintű SEO beállítások.
+            </p>
+            <a href="#arak" class="text-orange-600 font-semibold flex items-center">
+                Részletek és árak
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="referenciak" class="max-w-7xl mx-auto px-6 py-20 md:py-24 bg-white">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Nézd meg, mit tudunk.
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            Élő demóink segítségével azonnal láthatod, milyen minőséget kapsz. Ezeket a sablonokat kérésre azonnal testreszabjuk.
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div class="bg-slate-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+            <img 
+    src="assets/pelda-weboldal-iroda-01-comp.png" 
+    alt="weboldal iroda" 
+    class="w-full h-48 object-cover"
+    loading="lazy"
+>
+<div class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">WP Sablon</div>
+            
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                    Irodai weboldal
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Professzionális, megbízhatóságot sugalló design. Gyors és mobilbarát.
+                </p>
+                <div class="flex gap-3">
+                    <a href="https://autokincsek.hu/" target="_blank" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-500 transition duration-300">
+                        Élő Demó
+                    </a>
+                    <a href="#kapcsolat" class="flex-1 text-center border-2 border-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium hover:border-slate-900 transition duration-300">
+                        Kérem ezt
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+            <img 
+    src="assets/pelda-webshop-autokincsek-01.png" 
+    alt="Modellautó webáruház Demó képernyőfotója" 
+    class="w-full h-48 object-cover"
+    loading="lazy"
+>
+<div class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">WP Sablon</div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                    Modellautó webáruház
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Könnyen kezelhető, fókuszban a termékekkel. WooCommerce alapokon.
+                </p>
+                <div class="flex gap-3">
+                    <a href="https://autokincsek.hu" target="_blank" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-500 transition duration-300">
+                        Élő Demó
+                    </a>
+                    <a href="#kapcsolat" class="flex-1 text-center border-2 border-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium hover:border-slate-900 transition duration-300">
+                        Kérem ezt
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+            <div class="h-48 bg-gray-200 flex items-center justify-center relative">
+                <span class="text-gray-500 font-bold">Képernyőkép a blogról</span>
+                <div class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">WP Sablon</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                    Tanácsadói Blog
+                </h3>
+                <p class="text-slate-600 text-sm mb-4">
+                    Content marketingre optimalizált, tiszta felület a tartalomhoz.
+                </p>
+                <div class="flex gap-3">
+                    <a href="IDE_TEDD_A_DEMO_LINKET_3" target="_blank" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-500 transition duration-300">
+                        Élő Demó
+                    </a>
+                    <a href="#kapcsolat" class="flex-1 text-center border-2 border-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium hover:border-slate-900 transition duration-300">
+                        Kérem ezt
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="arak" class="max-w-7xl mx-auto px-6 py-20 md:py-32">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Átlátható csomagok kisvállalkozóknak.
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            Fix árak, nincsenek rejtett költségek. Válaszd ki azt a csomagot, amely a legjobban támogatja a növekedésedet.
+        </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 items-start">
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full flex flex-col">
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">Start</h3>
+            <p class="text-slate-600 mb-6">A gyors online megjelenésért.</p>
+            
+            <div class="mb-8">
+                <span class="text-5xl font-extrabold text-slate-900">89 880</span>
+                <span class="text-xl font-medium text-slate-500"> Ft-tól</span>
+            </div>
+            
+            <ul class="space-y-4 mb-10 flex-grow">
+                <li class="flex items-start text-slate-700"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 oldalas Landing oldal</li>
+                <li class="flex items-start text-slate-700"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Reszponzív (mobil) design</li>
+                <li class="flex items-start text-slate-700"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Kapcsolat űrlap</li>
+                <li class="flex items-start text-slate-500"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Nincs extra oldalak</li>
+            </ul>
+            
+            <a href="#kapcsolat" class="block text-center border-2 border-slate-200 text-slate-700 px-8 py-3 rounded-lg font-bold hover:border-slate-900 transition duration-300">
+                Kérjen ajánlatot
+            </a>
+        </div>
+
+        <div class="bg-slate-900 p-8 rounded-2xl shadow-2xl border-4 border-orange-500 h-full flex flex-col transform scale-105">
+            <p class="text-sm font-bold text-orange-400 uppercase tracking-widest mb-3">Ajánlott</p>
+            <h3 class="text-2xl font-bold text-white mb-2">Pro</h3>
+            <p class="text-slate-300 mb-6">A teljes vállalkozás online motorja.</p>
+            
+            <div class="mb-8">
+                <span class="text-5xl font-extrabold text-white">148 880</span>
+                <span class="text-xl font-medium text-slate-400"> Ft-tól</span>
+            </div>
+            
+            <ul class="space-y-4 mb-10 flex-grow">
+                <li class="flex items-start text-slate-50"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Max. 5 aloldal (Rólunk, Szolgáltatásaink stb.)</li>
+                <li class="flex items-start text-slate-50"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Alap SEO optimalizálás</li>
+                <li class="flex items-start text-slate-50"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Blog szekció (WP alapokon)</li>
+                <li class="flex items-start text-slate-50"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Kapcsolat űrlap & térkép</li>
+            </ul>
+            
+            <a href="#kapcsolat" class="block text-center bg-orange-500 text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-orange-500/50 hover:bg-orange-600 transition duration-300">
+                Ezzel indulok!
+            </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full flex flex-col">
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">Shop</h3>
+            <p class="text-slate-600 mb-6">A termékeid eladásának specialistája.</p>
+            
+            <div class="mb-8">
+                <span class="text-5xl font-extrabold text-slate-900">198 880</span>
+                <span class="text-xl font-medium text-slate-500"> Ft-tól</span>
+            </div>
+            
+            <ul class="space-y-4 mb-10 flex-grow">
+                <li class="flex items-start text-slate-700"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>WooCommerce / Shopify beállítás</li>
+                <li class="flex items-start text-slate-700"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Max. 10 termék feltöltése</li>
+                <li class="flex items-start text-slate-700"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Fizetési (pl. Barion) és szállítási integráció</li>
+                <li class="flex items-start text-slate-500"><svg class="w-6 h-6 mr-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Havi karbantartás külön</li>
+            </ul>
+            
+            <a href="#kapcsolat" class="block text-center border-2 border-slate-200 text-slate-700 px-8 py-3 rounded-lg font-bold hover:border-slate-900 transition duration-300">
+                Kérjen ajánlatot
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="folyamat" class="max-w-4xl mx-auto px-6 py-20 md:py-32">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            A közös munka 4 lépése.
+        </h2>
+        <p class="text-xl text-slate-600">
+            Kiszámítható, átlátható folyamat fix határidőkkel.
+        </p>
+    </div>
+
+    <div class="relative">
+        <div class="absolute left-4 top-0 bottom-0 w-1 bg-gray-200 hidden sm:block"></div>
+
+        <div class="mb-10 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12 hidden sm:block"></div>
+            <div class="z-10 flex items-center order-1 bg-orange-500 shadow-xl w-10 h-10 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+            </div>
+            <div class="order-1 bg-white rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4 ml-8 sm:ml-0">
+                <h3 class="mb-2 font-bold text-slate-900 text-xl">Ingyenes Konzultáció</h3>
+                <p class="text-sm leading-snug tracking-wide text-slate-600">
+                    Beszéljük át, mire van szükséged: célközönség, funkciók, határidő. Ezt követően fix árajánlatot kapsz.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-10 flex justify-between items-center w-full left-timeline">
+            <div class="order-1 bg-white rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4 mr-8 sm:mr-0">
+                <h3 class="mb-2 font-bold text-slate-900 text-xl">Design & Előzetes Terv</h3>
+                <p class="text-sm leading-snug tracking-wide text-slate-600">
+                    Összeállítjuk a dizájnelemeket (színek, betűtípusok) és küldünk egy drótvázat jóváhagyásra.
+                </p>
+            </div>
+            <div class="z-10 flex items-center order-1 bg-orange-500 shadow-xl w-10 h-10 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">2</h1>
+            </div>
+            <div class="order-1 w-5/12 hidden sm:block"></div>
+        </div>
+
+        <div class="mb-10 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12 hidden sm:block"></div>
+            <div class="z-10 flex items-center order-1 bg-orange-500 shadow-xl w-10 h-10 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+            </div>
+            <div class="order-1 bg-white rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4 ml-8 sm:ml-0">
+                <h3 class="mb-2 font-bold text-slate-900 text-xl">Kódolás és Beállítás</h3>
+                <p class="text-sm leading-snug tracking-wide text-slate-600">
+                    Megírjuk a gyors, tiszta kódot, beállítjuk a tárhelyet és a domain nevet. Egy demó linken folyamatosan követheted a munkát.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-10 flex justify-between items-center w-full left-timeline">
+            <div class="order-1 bg-white rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4 mr-8 sm:mr-0">
+                <h3 class="mb-2 font-bold text-slate-900 text-xl">Tesztelés és Élesítés</h3>
+                <p class="text-sm leading-snug tracking-wide text-slate-600">
+                    Közösen ellenőrizzük a végterméket. Utána élesítjük az oldalt, és átadjuk a karbantartáshoz szükséges dokumentációt.
+                </p>
+            </div>
+            <div class="z-10 flex items-center order-1 bg-orange-500 shadow-xl w-10 h-10 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">4</h1>
+            </div>
+            <div class="order-1 w-5/12 hidden sm:block"></div>
+        </div>
+
+    </div>
+</section>
+
+<section id="kapcsolat" class="bg-slate-900 py-20 md:py-32 px-6">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+        
+        <div>
+            <span class="text-orange-400 font-bold tracking-wider uppercase text-sm mb-3 block">Induljunk el együtt</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Kérjen ingyenes konzultációt!
+            </h2>
+            <p class="text-lg text-slate-400 mb-8">
+                Meséld el nekünk a céljaidat, mi pedig 24 órán belül felvesszük veled a kapcsolatot egy fix árajánlattal.
+            </p>
+            <div class="flex items-center space-x-4 text-slate-300">
+                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-3.28a1 1 0 01-.948-.684l-1.498-4.493a1 1 0 01.502-1.21l2.257-1.13a11.042 11.042 0 00-5.516-5.516l-1.13 2.257a1 1 0 01-1.21.502L5 8.28V5z"></path></svg>
+                <span class="text-lg font-semibold">+36 30 123 4567</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-2xl">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+                Kapcsolatfelvételi Űrlap
+            </h3>
+            <form name="contact" method="POST" data-netlify="true" action="/success"> 
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Teljes Név *</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 transition" placeholder="Pl. Kis Péter">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">E-mail Cím *</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 transition" placeholder="peter@vallalkozas.hu">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Üzenet (projekt leírása) *</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 transition" placeholder="Egy 5 oldalas bemutatkozó weboldalt szeretnék..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-bold shadow-md hover:bg-orange-600 transition duration-300">
+                    Ingyenes Ajánlatot Kérek
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-700 text-center text-sm text-slate-500">
+        <p>
+            &copy; 2025 WebStudio. Minden jog fenntartva. | 
+            <a href="/adatkezelesi" class="hover:text-orange-500 transition">Adatkezelési Tájékoztató</a> | 
+            <a href="/aszf" class="hover:text-orange-500 transition">Általános Szerződési Feltételek</a>
+        </p>
+    </div>
+</section>
+
+
+
+</body>
+</html>
