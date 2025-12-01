@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zöld Örökség Kertészet - Budapest és Agglomeráció</title>
+    <!-- Tailwind CSS betöltése a gyors és reszponzív stílusozáshoz -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Egyedi CSS a színekhez és animációkhoz */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --color-primary: #10B981; /* Smaragd zöld */
+            --color-secondary: #059669; /* Sötétebb zöld a gombokhoz */
+            --color-bg: #F0FDF4; /* Nagyon világos zöld háttér */
+            --color-text: #1F2937; /* Sötét szöveg */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            background-color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px -3px rgba(16, 185, 129, 0.4);
+        }
+        .btn-primary:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px -3px rgba(5, 150, 105, 0.6);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x800/22c55e/ffffff?text=+Z%C3%B6ld+%C3%96r%C3%B6ks%C3%A9g+Kert%C3%A9szet') center/cover no-repeat;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Kártya animáció */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Űrlap kiemelése */
+        .form-container {
+            background-color: var(--color-bg);
+            border: 1px solid #D1FAE5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigáció és CTA (Call to Action) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="#" class="text-2xl font-bold text-gray-800 tracking-wider">
+                Zöld Örökség
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#szolgaltatasok" class="text-gray-600 hover:text-green-600 transition duration-150">Szolgáltatások</a>
+                <a href="#referenciak" class="text-gray-600 hover:text-green-600 transition duration-150">Referenciák</a>
+                <a href="#kapcsolat" class="text-gray-600 hover:text-green-600 transition duration-150">Kapcsolat</a>
+                <a href="#ajanlatkeres" class="btn-primary px-4 py-2 rounded-full font-semibold shadow-lg">
+                    Kérjen ingyenes ajánlatot!
+                </a>
+            </div>
+            <!-- Mobil menü gomb (hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobil menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
+            <a href="#szolgaltatasok" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Szolgáltatások</a>
+            <a href="#referenciak" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Referenciák</a>
+            <a href="#kapcsolat" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kapcsolat</a>
+            <a href="#ajanlatkeres" class="block px-4 py-3 text-center btn-primary font-semibold">Kérjen ingyenes ajánlatot!</a>
+        </div>
+    </header>
+
+    <!-- Fő látványelem (Hero Szekció) -->
+    <section class="hero-section text-white text-center">
+        <div class="container mx-auto px-4 py-20">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight animate-fadeInDown">
+                Álomkerted Vár Budapesten és Környékén
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto animate-fadeInUp delay-200">
+                Profi kerttervezés, kivitelezés és fenntartás. A természet és a szakértelem találkozása.
+            </p>
+            <a href="#ajanlatkeres" class="btn-primary inline-block px-10 py-4 text-lg rounded-full font-bold uppercase tracking-wider animate-pulse">
+                Kérjen ajánlatot most! &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- Előnyök / Miért minket? szekció -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-gray-800">Miért a Zöld Örökség a legjobb választás?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Előny 1 -->
+                <div class="p-6 bg-green-50 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="text-4xl text-green-600 mb-4">🌿</div>
+                    <h3 class="text-xl font-semibold mb-3">Helyi szakértelem</h3>
+                    <p class="text-gray-600">Pontosan tudjuk, milyen növények és megoldások működnek a budapesti talaj- és klímaviszonyok között.</p>
+                </div>
+                <!-- Előny 2 -->
+                <div class="p-6 bg-green-50 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="text-4xl text-green-600 mb-4">📐</div>
+                    <h3 class="text-xl font-semibold mb-3">Komplett szolgáltatás</h3>
+                    <p class="text-gray-600">A tervezéstől a kivitelezésen át a rendszeres karbantartásig minden egy kézben.</p>
+                </div>
+                <!-- Előny 3 -->
+                <div class="p-6 bg-green-50 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="text-4xl text-green-600 mb-4">⭐</div>
+                    <h3 class="text-xl font-semibold mb-3">Minőség és garancia</h3>
+                    <p class="text-gray-600">Csak a legjobb minőségű alapanyagokkal dolgozunk, garanciával.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Szolgáltatások Szekció -->
+    <section id="szolgaltatasok" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Szolgáltatásaink</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Kerttervezés kártya -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
+                    <img src="https://placehold.co/600x400/10B981/ffffff?text=Kerttervez%C3%A9s" alt="Kerttervezés" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-3">Professzionális Kerttervezés</h3>
+                    <p class="text-gray-600 mb-4">Egyedi, személyre szabott tervek, 3D látványtervezéssel, figyelembe véve a helyszín adottságait.</p>
+                    <a href="#ajanlatkeres" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+                        Részletek és ajánlatkérés &rarr;
+                    </a>
+                </div>
+                
+                <!-- Kertépítés kártya -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
+                    <img src="https://placehold.co/600x400/059669/ffffff?text=Kert%C3%A9p%C3%ADt%C3%A9s" alt="Kertépítés" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-3">Teljeskörű Kertépítés</h3>
+                    <p class="text-gray-600 mb-4">Öntözőrendszer, térburkolat, növényültetés és gyepszőnyeg lerakás precízen és határidőre.</p>
+                    <a href="#ajanlatkeres" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+                        Részletek és ajánlatkérés &rarr;
+                    </a>
+                </div>
+                
+                <!-- Kertfenntartás kártya -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
+                    <img src="https://placehold.co/600x400/34D399/ffffff?text=Kertfenntart%C3%A1s" alt="Kertfenntartás" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-3">Rendszeres Karbantartás</h3>
+                    <p class="text-gray-600 mb-4">Tavaszi nagytakarítás, metszés, fűnyírás és gondozás, hogy kertje egész évben tökéletes legyen.</p>
+                    <a href="#ajanlatkeres" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+                        Részletek és ajánlatkérés &rarr;
+                    </a>
+                </div>
+                
+            </div>
+            
+            <!-- CTA sáv a szekció végén (konverzió) -->
+            <div class="mt-12 text-center p-8 bg-green-100 rounded-xl shadow-lg">
+                <p class="text-2xl font-bold text-gray-800 mb-4">Ne halogasd! Kezdődjön el álmaid kertjének tervezése!</p>
+                <a href="#ajanlatkeres" class="btn-primary inline-block px-8 py-3 text-lg rounded-full font-bold">
+                    Kattints ide az azonnali ajánlatkéréshez!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referenciák Szekció (Képek és visszajelzések) -->
+    <section id="referenciak" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Korábbi munkáink – Inspirálódjon!</h2>
+            
+            <!-- Referencia Képek -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <img src="https://placehold.co/400x300/60A5FA/ffffff?text=Kert+1+(Budai+villa)" alt="Referencia kert 1" class="w-full h-48 object-cover rounded-lg shadow-md hover:opacity-90 transition duration-300">
+                <img src="https://placehold.co/400x300/3B82F6/ffffff?text=Kert+2+(Agglomer%C3%A1ci%C3%B3)" alt="Referencia kert 2" class="w-full h-48 object-cover rounded-lg shadow-md hover:opacity-90 transition duration-300">
+                <img src="https://placehold.co/400x300/1D4ED8/ffffff?text=Kert+3+(T%C3%A1rsash%C3%A1z)" alt="Referencia kert 3" class="w-full h-48 object-cover rounded-lg shadow-md hover:opacity-90 transition duration-300">
+                <img src="https://placehold.co/400x300/1E40AF/ffffff?text=Kert+4+(T%C3%B3part)" alt="Referencia kert 4" class="w-full h-48 object-cover rounded-lg shadow-md hover:opacity-90 transition duration-300">
+            </div>
+
+            <!-- Ügyfél vélemények -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-3xl font-semibold text-center mb-8">Ügyfeleink mondták</h3>
+                <div class="bg-green-50 p-6 rounded-xl shadow-lg border-l-4 border-green-500 italic">
+                    <p class="mb-4 text-gray-700">"Elképesztő munka! A Zöld Örökség csapata túlszárnyalta az elvárásainkat. A kertünk egy valóságos oázis lett a budapesti házunk körül. Csak ajánlani tudom őket!"</p>
+                    <p class="text-right font-semibold text-green-700">- Kiss Anna, XI. kerület</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Kapcsolatfelvételi Űrlap (Konverziós Cél) -->
+    <section id="ajanlatkeres" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto form-container p-8 md:p-12 rounded-2xl shadow-2xl">
+                <h2 class="text-4xl font-bold text-center mb-4 text-green-700">Kérjen Ingyenes Ajánlatot!</h2>
+                <p class="text-center text-lg mb-8 text-gray-600">Töltse ki az űrlapot, és mi 24 órán belül felvesszük Önnel a kapcsolatot a részletek egyeztetése céljából.</p>
+
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Az Ön neve</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail címe</label>
+                        <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefonszám (opcionális)</label>
+                        <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Miben segíthetünk? (pl. Kertfelújítás, öntözőrendszer)</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"></textarea>
+                    </div>
+                    
+                    <div id="form-message" class="text-center font-semibold hidden p-3 rounded-lg"></div>
+
+                    <button type="submit" class="w-full btn-primary py-3 rounded-lg text-lg font-bold transition duration-300">
+                        Ajánlatkérés elküldése
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gyors Elérhetőség (Konverziós Cél) -->
+    <section id="kapcsolat" class="py-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Közvetlen Kapcsolat</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
+                <a href="tel:+36301234567" class="text-xl hover:text-green-400 transition duration-150 flex items-center">
+                    <span class="mr-2">📞</span> +36 30 123 4567
+                </a>
+                <a href="mailto:info@zoldorokseg.hu" class="text-xl hover:text-green-400 transition duration-150 flex items-center">
+                    <span class="mr-2">📧</span> info@zoldorokseg.hu
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Lábjegyzet -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p class="mb-2">&copy; 2025 Zöld Örökség Kertészet. Minden jog fenntartva.</p>
+            <p>Budapest és Agglomeráció | Adatkezelési tájékoztató (kitalált tartalom)</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript a menü és az űrlap kezeléséhez -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            // Mobil menü váltása
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Ajánlatkérő űrlap kezelése (szimuláció)
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Szimulált küldés
+                const name = document.getElementById('name').value;
+                
+                // Üzenet megjelenítése a felhasználónak
+                formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                formMessage.classList.add('bg-green-100', 'text-green-700', 'block');
+                formMessage.innerHTML = `Köszönjük az ajánlatkérést, **${name}**! Hamarosan felvesszük veled a kapcsolatot a megadott e-mail címen.`;
+                
+                // 3 másodperc után elrejti az üzenetet és üríti az űrlapot
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                    contactForm.reset();
+                }, 4000);
+            });
+        });
+    </script>
+</body>
+</html>

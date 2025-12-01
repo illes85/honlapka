@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikeres Tanácsadás - Profi Üzleti és Személyes Tanácsadás</title>
+    <!-- Tailwind CSS CDN betöltése -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Egyedi stílusok és Inter font beállítása */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .hero-bg {
+            background-color: #0b1a30; /* Mélyebb kék */
+            background-image: linear-gradient(135deg, #0b1a30 0%, #1a3a60 100%);
+        }
+        .text-accent {
+            color: #ff9900; /* Élénk narancs */
+        }
+        .btn-primary {
+            background-color: #ff9900;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigáció -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logó/Cégnév -->
+                <a href="#" class="text-2xl font-bold text-gray-900 flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-0.75-3M3 14h18M5 17h14M8 20h8"></path></svg>
+                    <span class="text-accent">Sikeres</span>Tanácsadás
+                </a>
+                <!-- Navigációs elemek (Desktop) -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-accent font-medium transition duration-150">Rólunk</a>
+                    <a href="#services" class="text-gray-600 hover:text-accent font-medium transition duration-150">Szolgáltatások</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-accent font-medium transition duration-150">Vélemények</a>
+                    <a href="#contact" class="text-gray-600 hover:text-accent font-medium transition duration-150">Kapcsolat</a>
+                </nav>
+                <!-- Mobilos menü gomb (Toggle) -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobilos menü (Alapértelmezetten rejtve) -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Rólunk</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Szolgáltatások</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Vélemények</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Kapcsolat</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hősképernyő (Hero Section) -->
+    <section class="hero-bg text-white py-20 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- BAL OLDAL: Szöveg és Gombok -->
+                <div class="text-center md:text-left">
+                    <span class="text-accent uppercase text-sm font-semibold tracking-wider mb-3 block">A te sikered a mi küldetésünk</span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+                        Professzionális <span class="text-accent">Tanácsadás</span> a Növekedésedért
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-10 max-w-3xl mx-auto md:max-w-none">
+                        Üzleti stratégia, személyes fejlődés, vezetői coaching. Megbízható partnerként segítünk elérni a kitűzött céljaidat.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#contact" class="inline-block px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white btn-primary hover:shadow-xl transform hover:scale-105 transition duration-300">
+                            Kérj ingyenes konzultációt
+                        </a>
+                        <a href="#services" class="inline-block px-8 py-3 border-2 border-white text-base font-medium rounded-full text-white hover:bg-white hover:text-gray-900 transform hover:scale-105 transition duration-300">
+                            Szolgáltatásaink
+                        </a>
+                    </div>
+                </div>
+
+                <!-- JOBB OLDAL: Kép a tanácsadóról (csak desktopon látszik) -->
+                <div class="hidden md:block rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <!-- Ide került a relatív elérési út és az onerror fallback -->
+                    <img 
+                        src="./assets/tanacsado.jpg" 
+                        alt="A Tanácsadó fényképe" 
+                        class="w-full h-full object-cover rounded-xl border-4 border-white/20"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/ff9900/0b1a30?text=A+Tanácsadó+Képe';"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rólunk/Cégbemutató (About Section) -->
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                        Több mint 10 év tapasztalat a stratégiai tanácsadásban
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Tanácsadó cégünk abban hisz, hogy minden ügyfél egyedi kihívásokkal és lehetőségekkel néz szembe. Személyre szabott megközelítéssel és gyakorlatias megoldásokkal segítjük a vállalkozásokat és magánszemélyeket a fenntartható siker elérésében.
+                    </p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-6 h-6 mr-3 text-accent mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Eredményorientált, mérhető stratégiák</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-6 h-6 mr-3 text-accent mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Egyedi, ügyfélközpontú megközelítés</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-6 h-6 mr-3 text-accent mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Teljeskörű diszkréció és etikus működés</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Kép helyőrző -->
+                <div class="order-1 md:order-2 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/600x400/0b1a30/ffffff?text=Professzionális+Tanácsadó" alt="[Image of Professional Consultant]" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Szolgáltatások (Services Section) -->
+    <section id="services" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Szolgáltatásaink</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">Válassz a vállalkozásod vagy személyes fejlődésed számára legmegfelelőbb megoldásaink közül.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Kártya 1: Üzleti stratégia -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 border-t-4 border-accent">
+                    <svg class="w-12 h-12 text-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Üzleti stratégia</h3>
+                    <p class="text-gray-600">Segítünk a növekedési lehetőségek feltérképezésében, a piaci pozíció erősítésében és a hosszú távú sikert biztosító tervek kidolgozásában.</p>
+                </div>
+
+                <!-- Kártya 2: Vezetői coaching -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 border-t-4 border-accent">
+                    <svg class="w-12 h-12 text-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2c0-.656-.126-1.283-.356-1.857M9 20l-5-5m0 0l5-5m-5 5h12"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Vezetői coaching</h3>
+                    <p class="text-gray-600">Fejleszd a vezetői képességeidet, optimalizáld a csapatmunkát és hozd ki a maximumot magadból és a munkatársaidból.</p>
+                </div>
+
+                <!-- Kártya 3: Digitális transzformáció -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 border-t-4 border-accent">
+                    <svg class="w-12 h-12 text-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 14h18M5 17h14M12 4v12"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Digitális transzformáció</h3>
+                    <p class="text-gray-600">Integráld a legújabb technológiákat a folyamataidba, növeld a hatékonyságot és légy versenyképesebb a digitális korban.</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="mt-12 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white btn-primary hover:shadow-xl transform hover:scale-105 transition duration-300">
+                Tudj meg többet!
+            </a>
+        </div>
+    </section>
+
+    <!-- Ügyfélvélemények (Testimonials Section) -->
+    <section id="testimonials" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-12">Amit ügyfeleink mondanak</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vélemény 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg relative">
+                    <svg class="w-8 h-8 text-accent absolute top-0 left-0 -mt-3 -ml-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 16V4h4v12H7zm8 0V4h4v12h-4z"></path></svg>
+                    <p class="text-gray-700 italic mb-4">"A Sikeres Tanácsadás csapata alapjaiban változtatta meg a cégünk működését. A stratégiai tervüknek köszönhetően már az első negyedévben 25%-os bevételnövekedést értünk el."</p>
+                    <div class="text-right">
+                        <p class="font-bold text-gray-900">- Kovács Péter</p>
+                        <p class="text-sm text-gray-500">CEO, Tech Innováció Kft.</p>
+                    </div>
+                </div>
+                <!-- Vélemény 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg relative">
+                    <svg class="w-8 h-8 text-accent absolute top-0 left-0 -mt-3 -ml-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 16V4h4v12H7zm8 0V4h4v12h-4z"></path></svg>
+                    <p class="text-gray-700 italic mb-4">"A vezetői coaching program rendkívül sokat segített a személyes hatékonyságom növelésében és a munka-magánélet egyensúlyának megteremtésében. Szívből ajánlom!"</p>
+                    <div class="text-right">
+                        <p class="font-bold text-gray-900">- Tóth Anna</p>
+                        <p class="text-sm text-gray-500">HR Igazgató</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kapcsolatfelvétel (Contact Section) -->
+    <section id="contact" class="py-16 sm:py-24 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-4">Lépj kapcsolatba velünk!</h2>
+            <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">Kezdjük el a közös munkát! Töltsd ki az űrlapot, és hamarosan felvesszük veled a kapcsolatot.</p>
+
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-2xl">
+                <!-- Kapcsolatfelvételi űrlap -->
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Név</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-accent focus:border-accent text-gray-900" placeholder="Kovács Péter">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">E-mail cím</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-accent focus:border-accent text-gray-900" placeholder="nev@pelda.hu">
+                    </div>
+                    <div>
+                        <label for="topic" class="block text-sm font-medium text-gray-700">Miben segíthetünk?</label>
+                        <select id="topic" name="topic" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-accent focus:border-accent text-gray-900">
+                            <option value="">Válassz egy témát</option>
+                            <option value="uzleti_strategia">Üzleti stratégia</option>
+                            <option value="vezeto_coaching">Vezetői coaching</option>
+                            <option value="digitalis_transzformacio">Digitális transzformáció</option>
+                            <option value="egyeb">Egyéb</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Üzenet</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-accent focus:border-accent text-gray-900" placeholder="Írd le röviden a problémádat vagy célodat..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-lg text-lg font-medium text-white btn-primary hover:shadow-xl transform hover:scale-[1.01] transition duration-300">
+                        Ajánlatot kérek
+                    </button>
+                    <!-- Üzenet visszajelzés (alapértelmezetten rejtve) -->
+                    <div id="form-message" class="hidden p-3 rounded-lg text-center" role="alert"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lábléc (Footer) -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-6">
+                <!-- Cím és Kapcsolat -->
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-accent">Elérhetőségek</h4>
+                    <p class="text-sm text-gray-400">1111 Budapest, Tanácsadó utca 12.</p>
+                    <p class="text-sm text-gray-400">Telefon: +36 30 123 4567</p>
+                    <p class="text-sm text-gray-400">Email: info@sikeres-tanacsadas.hu</p>
+                </div>
+                <!-- Navigációs linkek -->
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-accent">Gyorslinkek</h4>
+                    <ul class="space-y-1">
+                        <li><a href="#about" class="text-sm text-gray-400 hover:text-white transition duration-150">Rólunk</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition duration-150">Szolgáltatások</a></li>
+                        <li><a href="#contact" class="text-sm text-gray-400 hover:text-white transition duration-150">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <!-- Közösségi média (Placeholder) -->
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-accent">Kövess minket</h4>
+                    <div class="flex justify-center sm:justify-start space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 13.5h2.5l1-4H14v-2c0-1.12.33-1.89 1.9-1.89H18V4.11A21.43 21.43 0 0016 4c-2.45 0-3.9 1.45-3.9 4.07v1.43H10v4h2.5V20h4v-6.5z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.37-.83.5-1.75.87-2.73 1.07C18.3 4.6 17.2 4 16 4c-2.35 0-4.04 2.29-3.32 4.64C8.6 8.18 4.6 5.22 2 1.84c-.7.96-1.1 2.07-1.1 3.25 0 2.13 1.05 4 2.65 5.09-.85-.03-1.65-.25-2.35-.63v.03c0 2.4 1.7 4.39 3.95 4.86-.4.1-1.2.14-1.6.06.63 2 2.5 3.4 4.88 3.4A10.27 10.27 0 002 20.2c-.88 0-1.76-.08-2.6-.2C3.15 21 5.8 22 8.64 22c10.3 0 16-8.5 16-16 0-.17 0-.33-.03-.5.7-.5 1.3-1.18 1.8-1.9z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-4 text-sm text-gray-500">
+                &copy; 2025 Sikeres Tanácsadás. Minden jog fenntartva.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript a menü és az űrlap kezeléséhez -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobil menü kapcsoló
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Üzenet megjelenítő funkció (alert() helyett)
+            function showMessage(message, type = 'success') {
+                const formMessage = document.getElementById('form-message');
+                formMessage.textContent = message;
+                formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+
+                if (type === 'success') {
+                    formMessage.classList.add('bg-green-100', 'text-green-800');
+                } else if (type === 'error') {
+                    formMessage.classList.add('bg-red-100', 'text-red-800');
+                }
+
+                // Eltüntetés 5 másodperc után
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }
+
+            // Kapcsolatfelvételi űrlap kezelése (szimuláció)
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Megakadályozza az alapértelmezett űrlapküldést
+
+                // Szimulált küldési logika
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const topic = document.getElementById('topic').value;
+                const message = document.getElementById('message').value;
+
+                // Egyszerű validáció
+                if (!name || !email || !topic || !message) {
+                    showMessage('Hiba: Kérjük, töltsd ki az összes mezőt!', 'error');
+                    return;
+                }
+
+                // Küldés szimulálása
+                console.log('Adatok elküldése...');
+                console.log(`Név: ${name}, Email: ${email}, Téma: ${topic}, Üzenet: ${message}`);
+
+                // A "sikeres" visszajelzés megjelenítése
+                showMessage(`Köszönjük, ${name}! Sikeresen elküldted az üzenetedet. Hamarosan felvesszük veled a kapcsolatot.`, 'success');
+
+                // Űrlap törlése
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
